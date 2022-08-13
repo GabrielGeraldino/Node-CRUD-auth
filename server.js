@@ -12,6 +12,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use("/api", apiRouter);
 
+app.use(express.static("www"));
 app.use("/", express.static(path.join(__dirname, "/public/login")));
 
 const port = process.env.PORT || 3000;
